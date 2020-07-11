@@ -5,9 +5,15 @@
 	user-select: none;
 }
 
+html {
+}
+
 body {
 	width: 100vw;
 	height: 100vh;
+
+	overflow: hidden;
+
 	background: linear-gradient(#07141a, #162b35);
 }
 
@@ -16,4 +22,34 @@ body {
 
 	font-size: 2rem;
 	color: white;
+}
+
+.essay {
+	position: absolute;
+	top: 0;
+	right: -19vw;
+	/* right: -17.364817766vh; */
+
+	width: 20vw;
+	height: 100vh;
+
+	/* transform: rotate(10deg); */
+	transform-origin: top right;
+
+	background-color: white;
+}
+
+.essay:hover {
+	animation: showmenu 1s ease forwards, showmenu 1s ease reverse 3s forwards;
+}
+
+@keyframes showmenu {
+	from {
+		right: -19vw;
+		transform: rotate(0deg);
+	}
+	to {
+		right: -17.364817766vh;
+		transform: rotate(10deg);
+	}
 }
