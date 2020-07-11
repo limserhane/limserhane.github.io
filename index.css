@@ -24,28 +24,28 @@ body {
 	color: white;
 }
 
-.menu {
-	position: absolute;
-	top: 0;
-	right: -15vw;
+nav a {
+	display: block;
+	margin: 30% 0 30% 10%;
+	transform: rotate(-10deg);
+}
 
-	width: 20vw;
+nav {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right:0;
+
+	width: 0;
 	height: 100vh;
+
+	overflow: hidden;
 
 	transform: rotate(0deg);
 	transform-origin: top right;
 
 	background-color: white;
 
-	transition: 1s ease-in;
+	transition: 0.2s ease-in;
 }
 
-.menu:hover {
-	right: -17.364817766vh;
-	transform: rotate(10deg);
-}
-
-.menu-button {
-	padding: 100% 0 100% 30%;
-	transform: rotate(-10deg);
-}
