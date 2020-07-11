@@ -27,20 +27,19 @@ body {
 .essay {
 	position: absolute;
 	top: 0;
-	right: -19vw;
-	/* right: -17.364817766vh; */
+	right: -17.364817766vh;
 
 	width: 20vw;
 	height: 100vh;
 
-	/* transform: rotate(10deg); */
+	transform: rotate(10deg);
 	transform-origin: top right;
 
 	background-color: white;
 }
 
 .essay:hover {
-	animation: showmenu 1s ease forwards, showmenu 1s ease reverse 3s forwards;
+	animation: showmenu 1s ease-in reverse forwards; /*showmenu 1s ease forwards*/
 }
 
 @keyframes showmenu {

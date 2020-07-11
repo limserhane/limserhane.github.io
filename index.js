@@ -1,8 +1,6 @@
 (function () {
-	var essay = document.getElementByClassName("essay")[0];
-	var title = document.getElementByClassName("title");
+	var essay = document.getElementsByClassName("essay")[0];
+	var title = document.getElementsByClassName("title");
 
-	// essay.style.backgroundColor = "blue";
-
-	alert("yo");
+	essay.style.backgroundColor = "lightblue";
 })();
