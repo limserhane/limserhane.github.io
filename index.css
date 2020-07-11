@@ -14,7 +14,7 @@ body {
 
 	overflow: hidden;
 
-	background: linear-gradient(#07141a, #162b35);
+	background: linear-gradient(#232526, #414345);
 }
 
 .title {
@@ -24,13 +24,42 @@ body {
 	color: white;
 }
 
-nav a {
-	display: block;
-	margin: 30% 0 30% 10%;
-	transform: rotate(-10deg);
+.nav-call {
+	position: absolute;
+	top: 0;
+	right: -3vw;
+
+	width: 5vw;
+	height: 105vh;
+
+	transform: rotate(3deg);
+
+	background: white;
+	opacity: 0.05;
+
+	animation: nav-call-fade 1s ease infinite alternate;
 }
 
-nav {
+@keyframes nav-call-fade {
+	from{
+		opacity: 0.05;
+	}
+	to {
+		opacity: 0.02;
+	}
+}
+
+
+
+.nav-link {
+	display: block;
+	opacity: 0;
+	color: white;
+	margin: 30% 0 30% 10%;
+	transition: 1s ease-in-out;
+}
+
+.nav {
 	position: absolute;
 	z-index: 1;
 	top: 0;
@@ -41,11 +70,7 @@ nav {
 
 	overflow: hidden;
 
-	transform: rotate(0deg);
-	transform-origin: top right;
-
-	background-color: white;
+	background: linear-gradient(#414345, #232526);
 
 	transition: 0.2s ease-in;
 }
-

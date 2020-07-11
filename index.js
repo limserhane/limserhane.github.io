@@ -1,18 +1,27 @@
+const nav_angle = 5;
 
 var isNavOpen = false;
 
-var nav = document.getElementsByTagName("nav")[0];
+var nav = document.getElementsByClassName("nav")[0];
+var nav_links = document.getElementsByClassName("nav-link");
+var nav_call = document.getElementsByClassName("nav-call")[0];
 
 function openNav(){
-	nav.style.width = "20vw";
-	nav.style.right = -Math.sin(10*2*Math.PI/360)*100+"vh";
-	nav.style.transform = "rotate(10deg)";
+	nav.style.width = "10em";
+
+	for(const nav_link of nav_links){
+		nav_link.style.opacity = "1";
+	}
+
 	isNavOpen = true;
 }
 function closeNav(){
 	nav.style.width = "0";
-	nav.style.right = "0";
-	nav.style.transform = "rotate(0deg)";
+
+	for(const nav_link of nav_links){
+		nav_link.style.opacity = "0";
+	}
+
 	isNavOpen = false;
 }
 
@@ -20,6 +29,6 @@ function toggleNav(){
 	isNavOpen?closeNav():openNav();
 }
 
-nav.addEventListener("mouseenter", openNav);
+nav_call.addEventListener("mouseenter", openNav);
 nav.addEventListener("mouseleave", closeNav);
 
