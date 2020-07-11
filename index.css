@@ -24,31 +24,28 @@ body {
 	color: white;
 }
 
-.essay {
+.menu {
 	position: absolute;
 	top: 0;
-	right: -17.364817766vh;
+	right: -15vw;
 
 	width: 20vw;
 	height: 100vh;
 
-	transform: rotate(10deg);
+	transform: rotate(0deg);
 	transform-origin: top right;
 
 	background-color: white;
+
+	transition: 1s ease-in;
 }
 
-.essay:hover {
-	animation: showmenu 1s ease-in reverse forwards; /*showmenu 1s ease forwards*/
+.menu:hover {
+	right: -17.364817766vh;
+	transform: rotate(10deg);
 }
 
-@keyframes showmenu {
-	from {
-		right: -19vw;
-		transform: rotate(0deg);
-	}
-	to {
-		right: -17.364817766vh;
-		transform: rotate(10deg);
-	}
+.menu-button {
+	padding: 100% 0 100% 30%;
+	transform: rotate(-10deg);
 }
