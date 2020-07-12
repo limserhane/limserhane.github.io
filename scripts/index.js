@@ -1,11 +1,13 @@
-const nav_angle = 5;
 
-var nav = document.getElementsByClassName("nav")[0];
+
 var nav_links = document.getElementsByClassName("nav-link");
-var nav_call = document.getElementsByClassName("nav-call")[0];
+var nav_back = document.getElementsByClassName("nav-back")[0];
+var nav_middle = document.getElementsByClassName("nav-middle")[0];
+var nav_front = document.getElementsByClassName("nav-front")[0];
 
 function openNav() {
-	nav.style.height = "100%";
+	nav_middle.style.height = "102%";
+	nav_front.style.height = "102%";
 
 	for (const nav_link of nav_links) {
 		nav_link.style.opacity = "1";
@@ -13,12 +15,13 @@ function openNav() {
 }
 
 function closeNav() {
-	nav.style.height = "0%";
+	nav_middle.style.height = "0%";
+	nav_front.style.height = "0%";
 
 	for (const nav_link of nav_links) {
 		nav_link.style.opacity = "0";
 	}
 }
 
-nav_call.addEventListener("mouseenter", openNav);
-nav.addEventListener("mouseleave", closeNav);
+nav_back.addEventListener("mouseenter", openNav);
+nav_front.addEventListener("mouseleave", closeNav);
