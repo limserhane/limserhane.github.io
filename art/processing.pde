@@ -1,6 +1,7 @@
 
-int n = 20;
 int radius = 50;
+int n = (int)(min(screen.width, screen.height)/(radius));
+println(n);
 JPoint[][] points = new JPoint[n][n];
 
 double time;
