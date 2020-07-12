@@ -14,8 +14,8 @@ body {
 
 .title-header {
 	position: absolute;
-	top: -10%;
-	left: -2%;
+	top: 0;
+	left: 0;
 
 	width: 120%;
 	height: 6rem;
@@ -23,6 +23,7 @@ body {
 	background: linear-gradient(darkslateblue, lightskyblue);
 
 	transform: rotate(-5deg);
+	transform-origin: bottom left;
 }
 
 .title {
