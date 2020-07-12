@@ -1,44 +1,44 @@
-ArrayList balls = new ArrayList();
+JPoint[][] points = new JPoint[20][20];
+float green;
 
 void setup(){
     size(screen.width, screen.height-128);
     background(0, 0, 0, 0);
+
+    green = random(255);
+
+    for(int y = 0; y < 20; y++){
+        for(int x = 0; x < 20; x++){
+            points[x][y] = new JPoint(map(x, 0, 20, 0, width), map(y, 0, 20, 0, height));
+        }
+    }
 }
 
 void draw(){
     background(0, 0, 0, 0);
-    for(Ball b : balls){
-        b.update();
-        b.draw();
+    for(int y = 0; y < 20; y++){
+        for(int x = 0; x < 20; x++){
+            JPoint p = points[x][y];
+            p.update();
+            p.draw();
+        }
     }
 }
 
-void mouseClicked(){
-    Ball b = new Ball(mouseX, mouseY);
-    balls.add(b);
-}
-
-class Ball {
+class JPoint {
     int x, y;
-    int yV;
-    int gravity;
 
-    Ball(int initX, int initY){
+    JPoint(int initX, int initY){
         x = initX;
         y = initY;
-        yV = 1;
-        gravity = 1;
     }
 
     void draw(){
-        ellipse(x, y, 20, 20);
+        fill(map(x, 0, width, 0, 255), map(noise(green), 0, 1, 0, 255), map(y, 0, height, 0, 255));
+        ellipse(x, y, 15, 15);
     }
 
     void update(){
-        yV += gravity;
-        y += yV;
-        if(y >= height -20){
-            yV = -20;
-        }
+        green = green + 0.01;
     }
 }
