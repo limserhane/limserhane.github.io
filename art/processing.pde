@@ -12,7 +12,7 @@ void setup(){
     time = 0;
     for(int y = 0; y < n; y++){
         for(int x = 0; x < n; x++){
-            points[x][y] = new JPoint(map(x, 0, n, radius + 10, width), map(y, 0, n, 0, height));
+            points[x][y] = new JPoint(map(x, 0, n, radius, width), map(y, 0, n, 0, height));
         }
     }
 }
