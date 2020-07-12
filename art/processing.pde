@@ -7,7 +7,7 @@ void setup(){
 
     for(int y = 0; y < 20; y++){
         for(int x = 0; x < 20; x++){
-            points[x][y] = new JPoint(map(x, 0, 20, 0, width), map(y, 0, 20, 0, height));
+            points[x][y] = new JPoint(map(x, 0, 20, 20, width), map(y, 0, 20, 0, height));
         }
     }
 }
@@ -32,8 +32,14 @@ class JPoint {
     }
 
     void draw(){
+        // int green = 255/(1+map(
+        //     (mouseX-x)*(mouseX-x)+(mouseY-y)*(mouseY-y), 
+        //     0, x*x+y*y,
+        //     0, 255)
+        // );
+        int green = 255/(255*((mouseX-x)*(mouseX-x)+(mouseY-y)*(mouseY-y))/5/(x*x+y*y));
         noStroke();
-        fill(map(x, 0, width, 0, 255), map(mouseX, 0, width, 0, 255), map(y, 0, height, 0, 255));
+        fill(map(x, 0, width, 0, 255), green, map(y, 0, height, 0, 255));
         ellipse(x, y, 15, 15);
     }
 
