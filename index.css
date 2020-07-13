@@ -1,0 +1,121 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "IBM Plex Mono", monospace;
+	user-select: none;
+}
+
+body {
+	overflow: hidden;
+}
+
+.background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	z-index: -1;
+
+	background: linear-gradient(rgb(235, 233, 232), rgb(230, 222, 213));
+}
+
+.title {
+	width: 0%;
+
+	overflow: hidden;
+
+	font-size: 3rem;
+	color: rgb(37, 37, 37);
+
+	animation: title-back-appear linear 2s 1.2s forwards;
+}
+@keyframes title-back-appear {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+.nav-back {
+	position: fixed;
+	top: 0;
+	right: -2%;
+
+	width: 5%;
+	height: 0%;
+
+	transform: rotate(3deg);
+
+	background: linear-gradient(darkslateblue, lightskyblue);
+	opacity: 0.8;
+
+	animation: nav-back-appear linear 0.4s 1s forwards,
+		nav-back-float linear infinite alternate 1s;
+}
+@keyframes nav-back-appear {
+	from {
+		height: 0%;
+	}
+	to {
+		height: 110%;
+	}
+}
+@keyframes nav-back-float {
+	from {
+		top: 0%;
+	}
+	to {
+		top: -10%;
+	}
+}
+
+.nav-middle {
+	position: fixed;
+	top: 0;
+	right: 0;
+
+	width: 10%;
+	height: 0%;
+
+	transform: rotate(3deg);
+
+	background: linear-gradient(lightskyblue, darkslateblue);
+	opacity: 0.8;
+
+	transition: 0.2s ease-in;
+}
+
+.nav-front {
+	position: fixed;
+	z-index: 1;
+	bottom: 0;
+	right: 0;
+
+	width: 20%;
+	height: 0%;
+
+	overflow: hidden;
+
+	transform: rotate(-2deg);
+
+	background: linear-gradient(darkslateblue, lightskyblue);
+
+	transition: 0.2s ease-in;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.nav-link {
+	display: block;
+	font-size: 1.8rem;
+	opacity: 1;
+	color: white;
+	margin: auto;
+}
+.nav-link:hover {
+	font-size: 3rem;
+}

@@ -1,7 +1,9 @@
 
 int radius = 50;
 int n = (int)(min(screen.width, screen.height)/(radius));
-JPoint[][] points = new JPoint[n][n];
+int xoffset = (screen.width - n*radius*2)/2;
+int yoffset = (screen.height - n*radius*2)/2;
+CDot[][] points = new CDot[n][n];
 
 double time;
 
@@ -11,7 +13,7 @@ void setup(){
     time = 0;
     for(int y = 0; y < n; y++){
         for(int x = 0; x < n; x++){
-            points[x][y] = new JPoint(map(x, 0, n, radius, width), map(y, 0, n, 0, height));
+            points[x][y] = new CDot(map(x, 0, n, xoffset*1.5, width-xoffset*1.5), map(y, 0, n, yoffset, height-yoffset));
         }
     }
 }
@@ -21,17 +23,17 @@ void draw(){
     background(0, 0, 0, 0);
     for(int y = 0; y < n; y++){
         for(int x = 0; x < n; x++){
-            JPoint p = points[x][y];
+            CDot p = points[x][y];
             p.update();
             p.draw();
         }
     }
 }
 
-class JPoint {
+class CDot {
     int x, y;
 
-    JPoint(int initX, int initY){
+    CDot(int initX, int initY){
         x = initX;
         y = initY;
     }
