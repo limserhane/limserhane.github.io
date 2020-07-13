@@ -27,7 +27,7 @@ body {
 	font-size: 3rem;
 	color: rgb(37, 37, 37);
 
-	animation: title-back-appear linear 2s 1.2s forwards;
+	animation: title-back-appear linear 2s 1s forwards;
 }
 @keyframes title-back-appear {
 	from {
@@ -51,7 +51,7 @@ body {
 	background: linear-gradient(darkslateblue, lightskyblue);
 	opacity: 0.8;
 
-	animation: nav-back-appear linear 0.4s 1s forwards,
+	animation: nav-back-appear linear 0.4s 1.2s forwards,
 		nav-back-float linear infinite alternate 1s;
 }
 @keyframes nav-back-appear {
@@ -112,9 +112,12 @@ body {
 .nav-link {
 	display: block;
 	font-size: 1.8rem;
+	line-height: 6rem;
 	opacity: 1;
 	color: white;
-	margin: auto;
+	text-align: center;
+	text-decoration: none;
+	transition: ease 0.1s;
 }
 .nav-link:hover {
 	font-size: 3rem;

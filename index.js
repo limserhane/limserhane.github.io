@@ -9,7 +9,7 @@ function openNav() {
 	}, 0);
 	setTimeout(() => {
 		nav_front.style.height = "102%";
-	}, 200);
+	}, 100);
 }
 
 function closeNav() {
@@ -18,7 +18,7 @@ function closeNav() {
 	}, 0);
 	setTimeout(() => {
 		nav_middle.style.height = "0%";
-	}, 200);
+	}, 100);
 }
 
 nav_back.addEventListener("mouseenter", openNav);
