@@ -16,72 +16,74 @@ body {
 
 	z-index: -1;
 
-	background: linear-gradient(rgb(235, 233, 232), rgb(230, 222, 213));
+	background: offwhite;
 }
 
-.title {
+header {
 	width: 0%;
-
+	height: 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
 	overflow: hidden;
 
-	font-size: 3rem;
-	color: rgb(37, 37, 37);
-
+	background: linear-gradient(#AA076B, #61045F);
+	transform: rotate(-3deg);
+	transform-origin: bottom left;
 	animation: title-back-appear linear 2s 1s forwards;
 }
 @keyframes title-back-appear {
-	from {
-		width: 0%;
-	}
-	to {
-		width: 100%;
-	}
+	from { width: 0%; }
+	to { width: 105%; }
+}
+
+header > h1 {
+
+
+	font-size: 3rem;
+	color: white;
 }
 
 .nav-back {
 	position: fixed;
 	top: 0;
 	right: -2%;
+	z-index: 1;
 
 	width: 5%;
 	height: 0%;
 
 	transform: rotate(3deg);
 
-	background: linear-gradient(darkslateblue, lightskyblue);
+	background: linear-gradient(#AA076B, #61045F);
 	opacity: 0.8;
 
 	animation: nav-back-appear linear 0.4s 1.2s forwards,
 		nav-back-float linear infinite alternate 1s;
 }
 @keyframes nav-back-appear {
-	from {
-		height: 0%;
-	}
-	to {
-		height: 110%;
-	}
+	from { height: 0%; }
+	to { height: 110%; }
 }
 @keyframes nav-back-float {
-	from {
-		top: 0%;
-	}
-	to {
-		top: -10%;
-	}
+	from { top: 0%; }
+	to { top: -10%; }
 }
 
 .nav-middle {
 	position: fixed;
 	top: 0;
 	right: 0;
+	z-index: 2;
 
 	width: 10%;
 	height: 0%;
 
 	transform: rotate(3deg);
+	transform-origin: top right;
 
-	background: linear-gradient(lightskyblue, darkslateblue);
+	background: linear-gradient(#61045F, #AA076B);
 	opacity: 0.8;
 
 	transition: 0.2s ease-in;
@@ -89,7 +91,7 @@ body {
 
 .nav-front {
 	position: fixed;
-	z-index: 1;
+	z-index: 3;
 	bottom: 0;
 	right: 0;
 
@@ -99,8 +101,9 @@ body {
 	overflow: hidden;
 
 	transform: rotate(-2deg);
+	transform-origin: bottom right;
 
-	background: linear-gradient(darkslateblue, lightskyblue);
+	background: linear-gradient(#AA076B, #61045F);
 
 	transition: 0.2s ease-in;
 
@@ -112,7 +115,7 @@ body {
 .nav-link {
 	display: block;
 	font-size: 1.8rem;
-	line-height: 6rem;
+	height: 6rem;
 	opacity: 1;
 	color: white;
 	text-align: center;
