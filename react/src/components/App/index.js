@@ -1,13 +1,12 @@
 import React from "react";
-import "./App.css";
+import "./styles.css";
+
+import Header from "../Header";
 
 function App() {
 	return (
 		<div className="app-container">
-			<header>
-				<h1>/home/limserhane</h1>
-				<a href="#">≡</a>
-			</header>
+			<Header />
 		</div>
 	);
 }

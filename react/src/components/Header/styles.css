@@ -1,7 +1,3 @@
-.app-container {
-  min-height: 100vh;
-}
-
 header {
   position: absolute;
   top: 0;
@@ -35,4 +31,4 @@ header a {
   color: inherit;
   text-decoration: inherit;
 }
-/*# sourceMappingURL=App.css.map */
+/*# sourceMappingURL=styles.css.map */
