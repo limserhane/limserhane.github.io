@@ -1,12 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./styles.css";
 
 function Header() {
 	return (
 		<nav>
-			<h1>/home/limserhane</h1>
+			<Link to="/">
+				<h1>/home/limserhane</h1>
+			</Link>
 			<ul>
-				<li>Formation</li>
+				<Link to="/formation">
+					<li>Formation</li>
+				</Link>
 				<li>Expériences professionnelles</li>
 				<li>Compétences</li>
 				<li>Projets</li>
