@@ -3,10 +3,15 @@ import "./styles.css";
 
 function Header() {
 	return (
-		<header>
+		<nav>
 			<h1>/home/limserhane</h1>
-			<a href="#">≡</a>
-		</header>
+			<ul>
+				<li>Formation</li>
+				<li>Expériences professionnelles</li>
+				<li>Compétences</li>
+				<li>Projets</li>
+			</ul>
+		</nav>
 	);
 }
 
