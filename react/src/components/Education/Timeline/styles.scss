@@ -1,0 +1,30 @@
+.timeline {
+    width: 100%;
+    height: 100%;
+
+    background-color: lightblue;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.episode-container {
+    margin: 50px;
+    padding: 10px;
+    width: 50%;
+    
+    background-color: slateblue;
+
+    &.right {
+        right: 0;
+        background-color: cornflowerblue;
+    }
+    
+    &.left {
+        left: 0;
+        background-color: lightcoral;
+    }
+}
+
+

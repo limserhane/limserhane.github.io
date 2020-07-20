@@ -1,0 +1,35 @@
+.timeline {
+  width: 100%;
+  height: 100%;
+  background-color: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.episode-container {
+  margin: 50px;
+  padding: 10px;
+  width: 50%;
+  background-color: slateblue;
+}
+
+.episode-container.right {
+  right: 0;
+  background-color: cornflowerblue;
+}
+
+.episode-container.left {
+  left: 0;
+  background-color: lightcoral;
+}
+/*# sourceMappingURL=styles.css.map */
