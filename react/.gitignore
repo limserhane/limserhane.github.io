@@ -11,6 +11,7 @@
 # production
 /build
 .css
+!/src/styles.css
 .css.map
 
 # misc
