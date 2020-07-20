@@ -1,23 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 import "./styles.css";
 
 function Header() {
 	return (
-		<nav>
-			<Link to="/">
-				<h1>/home/limserhane</h1>
-			</Link>
+		<header className="header">
+			<h1>
+				<NavLink
+					to="/"
+					className="header__homelink"
+					activeClassName="header__homelink--active"
+					exact={true}
+				>
+					/home/limserhane
+				</NavLink>
+			</h1>
 			<ul>
-				<Link to="/formation">
-					<li>Formation</li>
-				</Link>
-				<li>Expériences professionnelles</li>
-				<li>Compétences</li>
 				<li>Projets</li>
+				<li>Compétences</li>
+				<li>
+					<NavLink
+						to="/about"
+						className="header__link"
+						activeClassName="header__link--active"
+					>
+						À propos
+					</NavLink>
+				</li>
 			</ul>
-		</nav>
+		</header>
 	);
 }
 

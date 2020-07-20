@@ -1,9 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 import "./styles.css";
 
-import { Header, Education, Home } from "../";
+import {Header, Home, About} from "../";
 
 function App() {
 	return (
@@ -11,12 +11,8 @@ function App() {
 			<div className="app-container">
 				<Header />
 				<Switch>
-					<Route path="/formation">
-						<Education />
-					</Route>
-					<Route path="/">
-						<Home />
-					</Route>
+					<Route path="/about" component={About} />
+					<Route path="/" component={Home} />
 				</Switch>
 			</div>
 		</Router>
