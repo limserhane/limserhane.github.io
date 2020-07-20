@@ -2,21 +2,32 @@ import React from "react";
 
 import "./styles.css";
 
-import TimelineBubble from "../TimelineBubble";
-
 function Timeline() {
 	return (
-		<div className="about-page">
-			<h3 className="about-page__title">Timeline</h3>
-			<div className="about-page__timeline">
-				{timeline.reverse().map((item, index) => (
-					<TimelineBubble
-						key={item.id}
-						orientation={index % 2 === 0 ? "left" : "right"}
-						content={item}
-					/>
-				))}
+		<div className="timeline">
+			{timeline.reverse().map((item, index) => (
+				<TimelineBubble
+					key={item.id}
+					orientation={index % 2 === 0 ? "left" : "right"}
+					content={item}
+				/>
+			))}
+			<div className="timeline__line" />
+		</div>
+	);
+}
+
+function TimelineBubble({orientation, content: {title, period, description}}) {
+	return (
+		<div className={`bubble-container ${orientation}`}>
+			<div className="bubble-primary">
+				<p className="bubble-primary__title">{title}</p>
+				<p className="bubble-primary__description">{description}</p>
 			</div>
+			<div className="bubble-secondary">
+				<p className="bubble-secondary__period">{period}</p>
+			</div>
+			<div className="timepatch" />
 		</div>
 	);
 }
