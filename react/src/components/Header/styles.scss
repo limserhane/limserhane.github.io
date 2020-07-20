@@ -1,4 +1,5 @@
 $FontColor: rgb(32, 38, 40);
+$AubergineGradient: linear-gradient(to right, #aa076b, #61045f);
 
 @mixin active-gradient-line-through($height) {
 	&--active {
@@ -11,7 +12,7 @@ $FontColor: rgb(32, 38, 40);
 		top: 50%;
 		width: 100%;
 		height: $height;
-		background: linear-gradient(to right, #aa076b, #61045f);
+		background: $AubergineGradient;
 		transform: rotate(-2deg);
 		transform-origin: center;
 	}
@@ -39,6 +40,7 @@ header {
 }
 
 .header__homelink {
+	position: relative;
 	color: $FontColor;
 	font-size: 2rem;
 	font-weight: bold;
@@ -46,6 +48,19 @@ header {
 	transition: 0.2s ease;
 
 	@include active-gradient-line-through(0.2rem);
+
+	// &::before {
+	// 	z-index: -1;
+	// 	position: absolute;
+	// 	content: "";
+	// 	left: -10%;
+	// 	width: 120%;
+	// 	top: -10%;
+	// 	height: 120%;
+	// 	transform: rotate(-2deg);
+	// 	transform-origin: center;
+	// 	background: $AubergineGradient;
+	// }
 }
 
 .header__link {
