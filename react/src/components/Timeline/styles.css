@@ -1,0 +1,13 @@
+.about-page__title {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.about-page__timeline {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+}
+/*# sourceMappingURL=styles.css.map */

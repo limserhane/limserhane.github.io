@@ -2,11 +2,13 @@ import React from "react";
 
 import "./styles.css";
 
+import Timeline from "../Timeline";
+
 function About(params) {
 	return (
 		<div>
-			<p>À propos</p>
-			<p>Lorem ipsum</p>
+			<h2>À propos</h2>
+			<Timeline />
 		</div>
 	);
 }
