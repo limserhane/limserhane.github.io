@@ -10,9 +10,9 @@
 
 # production
 /build
-.css
+**/*.css
 !/src/styles.css
-.css.map
+**/*.css.map
 
 # misc
 .DS_Store

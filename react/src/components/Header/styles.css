@@ -1,0 +1,94 @@
+header {
+  width: 100%;
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header ul {
+  width: 40%;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header ul li {
+  list-style: none;
+}
+
+.header__homelink {
+  color: #202628;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.header__homelink--active {
+  position: relative;
+}
+
+.header__homelink--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 0.2rem;
+  background: -webkit-gradient(linear, left top, right top, from(#aa076b), to(#61045f));
+  background: linear-gradient(to right, #aa076b, #61045f);
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.header__link {
+  color: #202628;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.header__link:hover {
+  font-size: 1.2rem;
+}
+
+.header__link--active {
+  position: relative;
+}
+
+.header__link--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 0.1rem;
+  background: -webkit-gradient(linear, left top, right top, from(#aa076b), to(#61045f));
+  background: linear-gradient(to right, #aa076b, #61045f);
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+/*# sourceMappingURL=styles.css.map */
